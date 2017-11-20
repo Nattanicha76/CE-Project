@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<html>
+@using (Html.BeginForm())
+{
+    <body>
+        <input type="text" name="Username" value="@Request.Cookies["AID"].Values" />
+
+        <label>รหัสผ่านปัจจบัน</label>
+        <input type="password" name="password" />
+
+        <label>รหัสผ่านใหม่</label>
+        <input type="password" name="password_new" />
+
+        <label>ยืนยันรหัสผ่านใหม่</label>
+        <input type="password" name="Confirm_new" />
+
+        <input type="submit" value="ยืนยัน" />
+
+    </body>
+}
+</html>
